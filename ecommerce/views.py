@@ -12,7 +12,7 @@ def home_page(request):
     }
     if request.user.is_authenticated():
         print("User is Authenticated...")
-        context["premium_content"] = "Yeahhhh.....This is for logged in users only"
+        context["premium_content"] = "Yeahhhh.....This is for logged in users only.\nYou are Logged in as - {}".format(request.user.username)
     return render(request, "home_page.html", context)
 
 
