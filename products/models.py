@@ -58,6 +58,7 @@ class Product(models.Model):
     # upload to path is MEDIA_ROOT/products/ where MEDIA_ROOT is mentioned in settings
     featured = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
+    timestamp = models.DateField(auto_now_add=True)
 
     objects = ProductManager()
 
